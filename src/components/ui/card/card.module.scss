@@ -1,0 +1,33 @@
+@import '@/styles/mixins';
+
+.container {
+  padding: 20px 16px 15px;
+  @include flex(column, center, center);
+
+  position: relative;
+  max-width: 220px;
+  height: 100%;
+
+  border-radius: 12px;
+  background: #fff;
+  margin: 16px auto -65px;
+  box-shadow: 0 15px 100px rgba(58, 46, 68, 0.06);
+
+  &:before {
+    content: '';
+    width: 90%;
+    height: 95%;
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -12px;
+    margin: auto;
+
+    background: var(--color-light-100);
+    border-radius: 12px;
+    box-shadow: 0 15px 90px var(--color-light-900);
+
+    z-index: -1;
+  }
+}

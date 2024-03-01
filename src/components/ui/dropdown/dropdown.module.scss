@@ -1,0 +1,74 @@
+.trigger {
+  background: transparent;
+  display: flex;
+  cursor: pointer;
+  margin: 5px 150px;
+
+  .skeletonCircle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skeletonText {
+    padding: 3px;
+    margin: 18px 10px;
+    width: 70px;
+    height: 10px;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .name {
+    margin: auto 10px;
+    transition: 0.3s;
+    font-size: 15px;
+
+    &:hover {
+      color: var(--color-accent-100);
+    }
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 99999;
+  color: var(--color-dark-500);
+  background: var(--color-light-500);
+  border-radius: 12px;
+  box-shadow: 0 35px 35px rgba(58, 46, 68, 0.12);
+  margin: 10px 0 0 20px;
+  padding: 10px 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid var(--color-light-500);
+
+    top: -7px;
+    left: 5px;
+  }
+
+  .item {
+    font-size: 14px;
+
+    a {
+      display: block;
+      padding: 5px 35px;
+      white-space: nowrap;
+
+      cursor: pointer;
+      color: #3c3c41;
+      transition: 0.5s;
+
+      &:hover {
+        color: var(--color-accent-300);
+      }
+    }
+  }
+}
